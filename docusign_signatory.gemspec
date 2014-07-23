@@ -7,6 +7,7 @@ Gem::Specification.new do |s|
   s.email       = 'db@filmskills.com.au'
   s.files       = Dir.glob("{model,lib}/**/*")
 
+  # Add in all dependencies
   s.add_runtime_dependency "httparty", "~> 0"
 
   s.add_development_dependency "minitest", "~> 0"
