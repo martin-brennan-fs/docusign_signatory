@@ -1,0 +1,518 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: DocuSignSignatory
+  
+    &mdash; Documentation by YARD 0.8.7.4
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!DocuSignSignatory.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index (D)</a> &raquo;
+    
+    
+    <span class="title">DocuSignSignatory</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: DocuSignSignatory
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">DocuSignSignatory</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/docusign_signatory.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>This class provides interfaces for setting up
+the DocuSign account settings as well as API
+endpoint.</p>
+
+<p>Before making any calls to the DocuSign API,
+you should set up the config:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='comment'>#using DocuSign Auth
+</span><span class='const'>DocuSignSignatory</span><span class='period'>.</span><span class='id identifier rubyid_config'>config</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;username&gt;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;password&gt;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;account_id&gt;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;integrator_key&gt;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+
+<span class='comment'>#using OAuth
+</span><span class='const'>DocuSignSignatory</span><span class='period'>.</span><span class='id identifier rubyid_config'>config</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;token&gt;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="DocuSignSignatory/Login.html" title="DocuSignSignatory::Login (class)">Login</a></span>
+    
+  
+</p>
+
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#config-class_method" title="config (class method)">+ (Object) <strong>config</strong>(username, password, account_id, integrator_key, endpoint_server = &quot;www&quot;, api_version = &quot;v2&quot;) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Sets up configuration required for communication with the DocuSign REST api, including account information and endpoint details, using a username, password, account_id and integrator key.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#config_oauth-class_method" title="config_oauth (class method)">+ (Object) <strong>config_oauth</strong>(access_token, endpoint_server = &quot;www&quot;, api_version = &quot;v2&quot;) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Sets up configuration required for communication with the DocuSign REST api, including account information and endpoint details, using an OAUTH2 token.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="config-class_method">
+  
+    + (<tt>Object</tt>) <strong>config</strong>(username, password, account_id, integrator_key, endpoint_server = &quot;www&quot;, api_version = &quot;v2&quot;) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Sets up configuration required for communication with the DocuSign
+REST api, including account information and endpoint details, using a username, password, account_id
+and integrator key.</p>
+
+<p>DocuSign account details can be found under Preferences &gt; API</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>username</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Your DocuSign account username (GUID or email)</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>password</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Your DocuSign API password</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>account_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Your DocuSign account ID</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>integrator_key</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Your DocuSign integrator/API key</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>endpoint_server</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>&quot;www&quot;</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The endpoint server to connect tofor the API calls. Can be <code>www</code> or <code>eu1</code></p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>api_version</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>&quot;v2&quot;</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The DocuSign API version to use (v1, v2)</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/docusign_signatory.rb', line 43</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_config'>config</span><span class='lparen'>(</span><span class='id identifier rubyid_username'>username</span><span class='comma'>,</span>
+				<span class='id identifier rubyid_password'>password</span><span class='comma'>,</span>
+				<span class='id identifier rubyid_account_id'>account_id</span><span class='comma'>,</span> 
+				<span class='id identifier rubyid_integrator_key'>integrator_key</span><span class='comma'>,</span>
+				<span class='id identifier rubyid_endpoint_server'>endpoint_server</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>www</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+				<span class='id identifier rubyid_api_version'>api_version</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>v2</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+	<span class='gvar'>$_ds_CONFIG</span><span class='lbracket'>[</span><span class='symbol'>:username</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_username'>username</span>
+	<span class='gvar'>$_ds_CONFIG</span><span class='lbracket'>[</span><span class='symbol'>:password</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_password'>password</span>
+	<span class='gvar'>$_ds_CONFIG</span><span class='lbracket'>[</span><span class='symbol'>:account_id</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_account_id'>account_id</span>
+	<span class='gvar'>$_ds_CONFIG</span><span class='lbracket'>[</span><span class='symbol'>:integrator_key</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_integrator_key'>integrator_key</span>
+	<span class='gvar'>$_ds_CONFIG</span><span class='lbracket'>[</span><span class='symbol'>:endpoint_server</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_endpoint_server'>endpoint_server</span>
+	<span class='gvar'>$_ds_CONFIG</span><span class='lbracket'>[</span><span class='symbol'>:api_version</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_api_version'>api_version</span>
+	<span class='gvar'>$_ds_CONFIG</span><span class='lbracket'>[</span><span class='symbol'>:endpoint</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>https://</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_endpoint_server'>endpoint_server</span><span class='embexpr_end'>}</span><span class='tstring_content'>.docusign.net/restapi/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_api_version'>api_version</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+	<span class='gvar'>$_ds_CONFIG</span><span class='lbracket'>[</span><span class='symbol'>:account_endpoint</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>https://</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_endpoint_server'>endpoint_server</span><span class='embexpr_end'>}</span><span class='tstring_content'>.docusign.net/restapi/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_api_version'>api_version</span><span class='embexpr_end'>}</span><span class='tstring_content'>/accounts/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_account_id'>account_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+
+	<span class='kw'>return</span> <span class='gvar'>$_ds_CONFIG</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="config_oauth-class_method">
+  
+    + (<tt>Object</tt>) <strong>config_oauth</strong>(access_token, endpoint_server = &quot;www&quot;, api_version = &quot;v2&quot;) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Sets up configuration required for communication with the DocuSign
+REST api, including account information and endpoint details, using an OAUTH2 token.</p>
+
+<p>Also, the DocuSign REST API login_information endpoint is called
+to get the account endpoint for future API requests.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>access_token</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>A valid DocuSign OAUTH2 access token</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>endpoint_server</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>&quot;www&quot;</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The endpoint server to connect tofor the API calls. Can be <code>www</code> or <code>eu1</code></p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>api_version</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>&quot;v2&quot;</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The DocuSign API version to use (v1, v2)</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/docusign_signatory.rb', line 71</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_config_oauth'>config_oauth</span><span class='lparen'>(</span><span class='id identifier rubyid_access_token'>access_token</span><span class='comma'>,</span>
+				<span class='id identifier rubyid_endpoint_server'>endpoint_server</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>www</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+				<span class='id identifier rubyid_api_version'>api_version</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>v2</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+	<span class='gvar'>$_ds_CONFIG</span><span class='lbracket'>[</span><span class='symbol'>:use_oauth2</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>true</span>
+	<span class='gvar'>$_ds_CONFIG</span><span class='lbracket'>[</span><span class='symbol'>:access_token</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_access_token'>access_token</span>
+	<span class='gvar'>$_ds_CONFIG</span><span class='lbracket'>[</span><span class='symbol'>:endpoint_server</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_endpoint_server'>endpoint_server</span>
+	<span class='gvar'>$_ds_CONFIG</span><span class='lbracket'>[</span><span class='symbol'>:api_version</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_api_version'>api_version</span>
+	<span class='gvar'>$_ds_CONFIG</span><span class='lbracket'>[</span><span class='symbol'>:endpoint</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>https://</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_endpoint_server'>endpoint_server</span><span class='embexpr_end'>}</span><span class='tstring_content'>.docusign.net/restapi/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_api_version'>api_version</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+
+	<span class='comment'># Set up the account endpoint using login at the same time.
+</span>	<span class='comment'># The account endpoint is used for all future API requests.
+</span>	<span class='kw'>if</span> <span class='lparen'>(</span><span class='gvar'>$_ds_CONFIG</span><span class='lbracket'>[</span><span class='symbol'>:account_endpoint</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span><span class='rparen'>)</span>
+
+		<span class='comment'># Get the login information from the DS API
+</span>		<span class='id identifier rubyid_login'>login</span> <span class='op'>=</span> <span class='const'>DocuSignSignatory</span><span class='op'>::</span><span class='const'>Login</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+		<span class='id identifier rubyid_account'>account</span> <span class='op'>=</span> <span class='id identifier rubyid_login'>login</span><span class='period'>.</span><span class='id identifier rubyid_login_information'>login_information</span>
+		<span class='gvar'>$_ds_CONFIG</span><span class='lbracket'>[</span><span class='symbol'>:account_endpoint</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_account'>account</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>loginAccounts</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>baseUrl</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+	<span class='kw'>end</span>
+
+	<span class='kw'>return</span> <span class='gvar'>$_ds_CONFIG</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Wed Jul 23 15:30:10 2014 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.4 (ruby-2.1.2).
+</div>
+
+  </body>
+</html>
